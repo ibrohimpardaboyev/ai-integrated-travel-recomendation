@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
+load_dotenv("keys.env")
 
 
 def genrate_ai_response(message):
