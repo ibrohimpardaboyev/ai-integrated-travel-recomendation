@@ -4,12 +4,16 @@ import sqlite3
 import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 
 def genrate_ai_response(message):
     client = OpenAI(
-    api_key="api-key"
+    api_key=os.getenv("api_key")
     )
-
     completion = client.chat.completions.create(
     model="gpt-4o-mini",
     store=True,
